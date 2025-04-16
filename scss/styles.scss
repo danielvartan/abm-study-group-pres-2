@@ -1,0 +1,96 @@
+/*-- scss:defaults --*/
+
+$presentation-title-slide-text-align: left;
+
+$callout-color-note: #006909;
+$callout-color-tip: #006909;
+$callout-color-caution: #006909;
+$callout-color-warning: #006909;
+$callout-color-important: #006909;
+
+/*-- scss:rules --*/
+
+/* Root ----- */
+
+:root {
+  --r-heading-margin: 0 0 25px 0;
+  --r-selection-background-color: #006909;
+  --r-selection-color: #FFFFFF;
+}
+
+/* Colors ----- */
+
+.brand-green {
+  color: $brand-green;
+}
+
+.brand-red {
+  color: $brand-red;
+}
+
+.brand-brown {
+  color: $brand-brown;
+}
+
+.brand-brown-750 {
+  color: $brand-brown-750;
+}
+
+.brand-light-green {
+  color: $brand-light-green;
+}
+
+.brand-dark-red {
+  color: $brand-dark-red;
+}
+
+.brand-gray {
+  color: $brand-gray;
+}
+
+.brand-black {
+  color: $brand-black;
+}
+
+/* Controls ----- */
+
+.reveal .controls button {
+  color: $brand-brown;
+}
+
+/* Captions ----- */
+
+.legend {
+  font-size: .9rem;
+  color: $brand-black;
+}
+
+/* rmarkdown::paged_table ----- */
+
+.pagedtable-footer {
+  font-size: 1rem;
+}
+
+/* Others ----- */
+
+.center-x {
+  display: inline-block;
+  text-align: center;
+}
+
+.center-y {
+  display: flex;
+  justify-content: center;
+  height: 90%;
+}
+
+.center-xy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+
+.bold {
+  font-weight: bold;
+}

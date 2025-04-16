@@ -1,0 +1,401 @@
+## Hi there! 👋 {.smaller}
+
+```{r}
+#| label: setup
+#| include: false
+
+source(here::here("R", "_setup.R"))
+```
+
+::::: {.columns}
+:::: {.column style="width: 47.5%;"}
+This presentation will talk about **Prediction** and **Interaction** in the context of **Agent-Based Modeling** (ABM).
+
+![](images/netlogo-icon-arrows.png){fig-align="center" style="width: 60%; padding-top: 80px;"}
+::::
+:::: {.column style="width: 5%;"}
+::::
+:::: {.column style="width: 47.5%;"}
+Here are our main topics:
+
+::: {style="font-size: 0.85em; padding-top: 15px;"}
+1. [**Introduction**]{.brand-brown}
+1. [**Prediction**]{.brand-brown}
+1. [**Interaction**]{.brand-brown}
+1. [**Real-World Applications**]{.brand-brown}
+1. [**Conclusion**]{.brand-brown}
+:::
+::::
+:::::
+
+::: footer
+(Artwork extracted from the [NetLogo Web logo](https://netlogoweb.org/))
+:::
+
+::: {.notes}
+:::
+
+# Introduction {.smaller}
+
+::: {.notes}
+:::
+
+## Main Reference {.smaller}
+
+:::: {.columns}
+::: {.column style="width: 47.5%;"}
+[![](images/railsback-2019-cover.png){fig-align="center" style="width: 90%; padding-top: 0px;"}](https://www.railsback-grimm-abm-book.com/)
+:::
+::: {.column style="width: 5%;"}
+:::
+::: {.column style="width: 47.5%;"}
+[![](images/railsback-2019-p-97.png){fig-align="center" style="width: 90%;"}](https://www.railsback-grimm-abm-book.com/)
+:::
+::::
+
+::: footer
+(Reproduced from @railsback2019a)
+:::
+
+::: {.notes}
+:::
+
+## ODD {.smaller}
+
+::::: {.columns}
+:::: {.column style="width: 30%;"}
+[Overview]{.brand-brown .bold}
+
+::: {style="font-size: 0.85em;"}
+A) Purpose and Patterns
+A) Entities, State Variables, and Scales
+A) Process Overview and Scheduling
+:::
+::::
+:::: {.column style="width: 10%;"}
+::::
+:::: {.column style="width: 30%;"}
+[Design Concepts]{.brand-brown .bold}
+
+::: {style="font-size: 0.85em;"}
+A) Basic Principles
+A) ~~Emergence~~
+A) ~~Adaptation~~
+A) ~~Objectives~~
+A) ~~Learning~~
+A) [Prediction]{.brand-red .bold}
+A) ~~Sensing~~
+A) [Interaction]{.brand-red .bold}
+A) Stochasticity
+A) Collectives
+A) ~~Observation~~
+:::
+::::
+:::: {.column style="width: 5%;"}
+::::
+:::: {.column style="width: 25%;"}
+[Details]{.brand-brown .bold}
+
+::: {style="font-size: 0.85em;"}
+A) Initialization
+A) Input Data
+A) Submodels
+:::
+::::
+:::::
+
+::: footer
+(Based on @railsback2019a)
+:::
+
+## Our Schedule {.smaller}
+
+:::: {.columns}
+::: {.column style="width: 45%; font-size: 0.9em;"}
+**February** **19**<br>9 & 10 – Observation & Sensing
+
+[**March**]{.brand-brown} **12** <br>11 – Adaptive Behavior and Objectives
+
+[**April**]{.brand-red} **16**<br>12 & 13 – Prediction & Interaction
+
+[**May**]{.brand-brown} **21**<br>14 & 15 – Scheduling & Stochasticity
+
+[**June**]{.brand-brown} **18**<br>16 – Collectives
+:::
+::: {.column style="width: 5%; font-size: 0.9em;"}
+:::
+::: {.column style="width: 45%; font-size: 0.9em;"}
+[**August**]{.brand-brown} **13**<br>18 – Patterns for Model Structure
+
+[**September**]{.brand-brown} **10**<br>19 – Theory Development
+
+[**October**]{.brand-brown} **8**<br>20 – Parameterization and Calibration
+
+[**November**]{.brand-brown} **19**<br>22 – Analyzing and Understanding ABMs
+
+[**December**]{.brand-brown} **10**<br>23 – Sensitivity, Uncertainty, and Robustness Analysis
+:::
+::::
+
+::: {.notes}
+:::
+
+## Past Concepts {.smaller}
+
+[**Adaptive behaviors**]{.brand-green} are decisions that agents make, in response to the current state of themselves and their environment, to improve (either explicitly or implicitly) their state with respect to some [**objective**]{.brand-red}. [@railsback2019a, p. 149]
+
+::: {style="padding-top: 15px;"}
+**Busi­nesses** may make decisions to **increase profit or market share**, but doing so often increases the risk of losses.
+
+**Animals** may seek **higher food intake** but must consider that eating more can also increase the risk of being eaten.
+
+**Political parties** may act to **increase their popularity** but at the cost of compromising their core values.
+:::
+
+::: footer
+[@railsback2019a, pp. 149-150]
+:::
+
+::: {.notes}
+:::
+
+# Prediction {.smaller}
+
+::: {.notes}
+:::
+
+## Chapter Objectives {.smaller}
+
+Develop an understanding that modeling adaptive decisions typically requires model­ing some kind of prediction of the future consequences of choices, and of how different assumptions about prediction can affect model results.
+
+Learn the extremely important technique of programming and analyzing key submodels independently to thoroughly understand their behavior.
+
+Learn to draw contour plots of submodel results.
+
+Be exposed to one technique—Bayesian updating—for modeling how individuals update their predictions on the basis of what has happened so far.
+
+::: {.notes}
+:::
+
+## ODD Questions {.smaller}
+
+:::: {.columns}
+::: {.column style="width: 47.5%; padding-top: 0px;"}
+[**How do agents predict future conditions (environmental and internal) in their submodels for adaptive behavior?** What assumptions about, or mechanisms of, the real individuals being modeled were the basis for how prediction is modeled?]{.brand-green}`<br><br>`{=html}[@grimm2010; @grimm2020; @railsback2019a]
+:::
+::: {.column style="width: 5%;"}
+:::
+::: {.column style="width: 47.5%; padding-top: 0px;"}
+[**How does simulated prediction make use of mechanisms such as memory, learning, or environmental cues?** Or is prediction “tacit", i.e., only implied in simple rules for adaptive behavior?]{.brand-red}`<br><br>`{=html}[@grimm2020; @railsback2019a]
+:::
+::::
+
+::: {.notes}
+:::
+
+## ODD Questions {.smaller}
+
+:::: {.columns}
+::: {.column style="width: 47.5%; padding-top: 0px;"}
+[**If appropriate, what internal models are agents assumed to use to estimate future conditions or consequences of their decisions?** What tacit or hidden predictions are implied in these internal model assumptions?]{.brand-brown}`<br><br>`{=html}[@grimm2010]
+:::
+::: {.column style="width: 5%;"}
+:::
+::: {.column style="width: 47.5%; padding-top: 0px;"}
+[**Which data do the agents use to predict future conditions?**]{.brand-dark-red}`<br><br>`{=html}[@muller2013]
+:::
+::::
+
+::: {.notes}
+:::
+
+## Prediction {.smaller}
+
+Modeling adaptive behavior often requires mod­eling prediction. [@railsback2019a, p. 161]
+
+## Internal Models {.smaller .nostretch}
+
+![](images/holland-1995-figure-1-13.png){fig-align="center" style="width: 52.5%; padding-top: 0px;"}
+
+::: footer
+[@holland1995, Figure 1.13]
+:::
+
+::: {.notes}
+:::
+
+## Internal Models {.smaller}
+
+A **tacit** internal model simply prescribes a current action, under an implicit prediction of some desired future state, as in the case of the bacterium.
+
+An **overt** internal model is used as a basis for explicit, but internal, explorations of alternatives, a process often called lookahead.
+
+::: {style="padding-top: 15px;"}
+Both tacit and overt models are found in CAS [Complex Adaptive Systems] of all kinds --- the actions and identity supplied by an immune system fall at the tacit end of the scale, whereas the internal models of agents in an economy are both tacit and overt.
+:::
+
+::: footer
+[@holland1995, p. 33]
+:::
+
+::: {.notes}
+:::
+
+## Two Systems {.smaller}
+
+:::: {.columns}
+::: {.column style="width: 60%; padding-top: 0px;"}
+**System 1** operates automatically and quickly, with little or no effort and no sense of voluntary control.
+
+**System 2** allocates attention to the effortful mental activities that demand it, including complex computations. The operations of System 2 are often associated with the subjective experience of agency, choice, and concentration.
+:::
+::: {.column style="width: 40%; padding-top: 0px;"}
+[![](images/kahneman-2013-cover.png){fig-align="center" style="width: 90%; padding-top: 0px;"}](https://www.google.com/books/edition/_/SHvzzuCnuv8C)
+:::
+::::
+
+::: footer
+[@kahneman2013]
+:::
+
+::: {.notes}
+:::
+
+# Interaction {.smaller}
+
+::: {.notes}
+:::
+
+## Learning Objectives {.smaller}
+
+Understand how to model and program competition among agents for a shared resource.
+
+Master how to program direct interactions, when one agent makes another agent execute some behavior.
+
+Understand the difference between local and global interactions and how to model each.
+
+Learn how to program long­term interactions among turtles using two techniques: creat­ing a NetLogo link between interacting turtles, and giving turtles a variable that contains the other turtle(s) it interacts with.
+
+Understand how NetLogo’s lists can be used to model memory.
+
+::: {.notes}
+:::
+
+## ODD Questions {.smaller}
+
+:::: {.columns}
+::: {.column style="width: 47.5%; padding-top: 0px;"}
+[**What kinds of interactions among agents are assumed?** Are there direct interactions in which individuals encounter and affect others, or are interactions indirect, e.g., via competition for a mediating resource?]{.brand-green}`<br><br>`{=html}[@muller2013; @grimm2010; @grimm2020; @railsback2019a]
+:::
+::: {.column style="width: 5%;"}
+:::
+::: {.column style="width: 47.5%; padding-top: 0px;"}
+[**How do the model’s agents interact?** Do they interact directly with each other (e.g., does one agent directly change the state of others)? Or is interaction mediated, such as via competition for a resource?]{.brand-red}`<br><br>`{=html}[@grimm2010; @grimm2020; @railsback2019a]
+:::
+::::
+
+::: {.notes}
+:::
+
+## ODD Questions {.smaller}
+
+:::: {.columns}
+::: {.column style="width: 47.5%; padding-top: 0px;"}
+[**With which other agents does an agent interact?**]{.brand-brown}`<br><br>`{=html}[@grimm2020; @railsback2019a]
+:::
+::: {.column style="width: 5%;"}
+:::
+::: {.column style="width: 47.5%; padding-top: 0px;"}
+[**What real interaction mechanisms were the model’s representation of interaction based on?** If the interactions involve communication, how are such communications represented? At what spatial and temporal scales do they occur?]{.brand-dark-red}`<br><br>`{=html}[@grimm2010; @grimm2020; @railsback2019a]
+:::
+::::
+
+::: {.notes}
+:::
+
+## ODD Questions {.smaller}
+
+:::: {.columns}
+::: {.column style="width: 47.5%; padding-top: 0px;"}
+[**On what do the interactions depend?**]{.brand-black}`<br><br>`{=html}[@muller2013]
+:::
+::: {.column style="width: 5%;"}
+:::
+::: {.column style="width: 47.5%; padding-top: 0px;"}
+[**If a coordination network exists, how does it affect the agent behavior?** Is the structure of the network imposed or emergent?]{.brand-green}`<br><br>`{=html}[@muller2013]
+:::
+::::
+
+::: {.notes}
+:::
+
+# Real-World Applications
+
+::: {.notes}
+:::
+
+# Conclusion {.smaller}
+
+::: {.notes}
+:::
+
+## Summary of Key Takeaways {.smaller}
+
+[**Complex systems**]{.brand-red} are systems with many interconnected parts that exhibit emergent behavior.
+
+[**Complexity science**]{.brand-red} seeks to explain emergent phenomena or mechanisms that “screen-off” their constituent parts and thereby allow new levels of description and understanding.
+
+[**Agent-based models**]{.brand-red} are bottom-up stochastic computational models with the purpose of simulating the behavior of agents and their interactions, allowing us to study emergent phenomena.
+
+[**Prediction**]{.brand-red}
+
+[**Interaction**]{.brand-red}
+
+::: {.notes}
+:::
+
+## Closing Remarks {.smaller}
+
+[![License: MIT](images/mit-license-badge.svg){style="width: 10.5%; padding-top: 0px;"}](https://choosealicense.com/licenses/mit/)
+[![License: CC BY 4.0](images/cc-license-badge.svg){style="width: 15%; padding-top: 0px;"}](https://creativecommons.org/licenses/by/4.0/)
+
+This presentation was created with the [R](https://www.r-project.org/) programming language and the [Quarto](https://quarto.org/) Publishing System. The code and materials are available on [GitHub](https://github.com/danielvartan/abm-study-group-pres-2).
+
+![](images/horst-figure-1.png){fig-align="center" style="width: 80%; padding-top: 50px;"}
+
+::: footer
+(Artwork by [Allison Horst](https://twitter.com/allison_horst))
+:::
+
+::: {.notes}
+:::
+
+## References {.smaller}
+
+::: {style="font-size: 0.75em;"}
+In accordance with the [American Psychological Association (APA) Style](https://apastyle.apa.org/), 7th edition.
+:::
+
+::: {#refs style="font-size: 0.75em;"}
+:::
+
+::: {.notes}
+:::
+
+## Thank You! {.nostretch}
+
+![](images/horst-figure-2.png){fig-align="center" style="width: 70%; padding-top: 25px;"}
+
+::: footer
+(Artwork by [Allison Horst](https://twitter.com/allison_horst))
+:::
+
+::: {.notes}
+:::
+
+# Appendices {visibility="uncounted"}
+
+## (AP) Placeholder {.smaller .nostretch visibility="uncounted"}
+
+::: {.notes}
+:::
