@@ -9,9 +9,7 @@
 
 ## Overview
 
-This repository contains the slides for a presentation titled *Prediction and Interaction in Agent-Based Models* delivered on April 15, 2025, at the *Agent-Based Model Study Group* of the [Sustentarea](https://www.fsp.usp.br/sustentarea/) Research and Extension Center at the University of São Paulo ([USP](https://www5.usp.br/)).
-
-You can access the slides [here](https://danielvartan.github.io/abm-study-group-pres-2/).
+This repository contains the slides for a presentation titled *Prediction and Interaction in Agent-Based Models* delivered on April 15, 2025, at the *Agent-Based Model Study Group* of the [Sustentarea](https://www.fsp.usp.br/sustentarea/) Research and Extension Center at the University of São Paulo ([USP](https://www5.usp.br/)). You can access the slides [here](https://danielvartan.github.io/abm-study-group-pres-2/).
 
 ## License
 

@@ -22,7 +22,6 @@ Here are our main topics:
 1. [**Introduction**]{.brand-brown}
 1. [**Prediction**]{.brand-brown}
 1. [**Interaction**]{.brand-brown}
-1. [**Real-World Applications**]{.brand-brown}
 1. [**Conclusion**]{.brand-brown}
 :::
 ::::
@@ -140,9 +139,9 @@ A) Submodels
 ::: {.notes}
 :::
 
-## Past Concepts {.smaller}
+## Previous Concepts {.smaller}
 
-[**Adaptive behaviors**]{.brand-green} are decisions that agents make, in response to the current state of themselves and their environment, to improve (either explicitly or implicitly) their state with respect to some [**objective**]{.brand-red}. [@railsback2019a, p. 149]
+[**Adaptive behaviors**]{.brand-green} are decisions that agents make, in response to the current state of themselves and their environment, to improve (either explicitly or implicitly) their state with respect to some [**objective**]{.brand-red}.
 
 ::: {style="padding-top: 15px;"}
 **Busi­nesses** may make decisions to **increase profit or market share**, but doing so often increases the risk of losses.
@@ -164,15 +163,18 @@ A) Submodels
 ::: {.notes}
 :::
 
-## Chapter Objectives {.smaller}
+## Prediction
 
-Develop an understanding that modeling adaptive decisions typically requires model­ing some kind of prediction of the future consequences of choices, and of how different assumptions about prediction can affect model results.
+[**Prediction**]{.brand-red} is the process by which agents predict future conditions for adaptive behavior.
 
-Learn the extremely important technique of programming and analyzing key submodels independently to thoroughly understand their behavior.
 
-Learn to draw contour plots of submodel results.
+::: {style="font-size: 0.8em; padding-top: 10px;"}
+We include prediction in our design concepts because even the simplest decisions involve prediction, and assuming our agents make predictions allows us to design powerful decision ­making submodels.
+:::
 
-Be exposed to one technique—Bayesian updating—for modeling how individuals update their predictions on the basis of what has happened so far.
+::: footer
+[@railsback2019a]
+:::
 
 ::: {.notes}
 :::
@@ -209,10 +211,6 @@ Be exposed to one technique—Bayesian updating—for modeling how individuals u
 ::: {.notes}
 :::
 
-## Prediction {.smaller}
-
-Modeling adaptive behavior often requires mod­eling prediction. [@railsback2019a, p. 161]
-
 ## Internal Models {.smaller .nostretch}
 
 ![](images/holland-1995-figure-1-13.png){fig-align="center" style="width: 52.5%; padding-top: 0px;"}
@@ -226,9 +224,9 @@ Modeling adaptive behavior often requires mod­eling prediction. [@railsback2019
 
 ## Internal Models {.smaller}
 
-A **tacit** internal model simply prescribes a current action, under an implicit prediction of some desired future state, as in the case of the bacterium.
+A [**tacit**]{.brand-red} internal model simply prescribes a current action, under an implicit prediction of some desired future state, as in the case of the bacterium.
 
-An **overt** internal model is used as a basis for explicit, but internal, explorations of alternatives, a process often called lookahead.
+An [**overt**]{.brand-red} internal model is used as a basis for explicit, but internal, explorations of alternatives, a process often called lookahead.
 
 ::: {style="padding-top: 15px;"}
 Both tacit and overt models are found in CAS [Complex Adaptive Systems] of all kinds --- the actions and identity supplied by an immune system fall at the tacit end of the scale, whereas the internal models of agents in an economy are both tacit and overt.
@@ -241,22 +239,9 @@ Both tacit and overt models are found in CAS [Complex Adaptive Systems] of all k
 ::: {.notes}
 :::
 
-## Two Systems {.smaller}
+## Business Investor Model (11.5) {.smaller}
 
-:::: {.columns}
-::: {.column style="width: 60%; padding-top: 0px;"}
-**System 1** operates automatically and quickly, with little or no effort and no sense of voluntary control.
-
-**System 2** allocates attention to the effortful mental activities that demand it, including complex computations. The operations of System 2 are often associated with the subjective experience of agency, choice, and concentration.
-:::
-::: {.column style="width: 40%; padding-top: 0px;"}
-[![](images/kahneman-2013-cover.png){fig-align="center" style="width: 90%; padding-top: 0px;"}](https://www.google.com/books/edition/_/SHvzzuCnuv8C)
-:::
-::::
-
-::: footer
-[@kahneman2013]
-:::
+[![](images/business-investor-model-11-5-interface.png){fig-align="center" style="width: 100%; padding-top: 30px;"}](https://github.com/danielvartan/business-investor-model)
 
 ::: {.notes}
 :::
@@ -266,17 +251,17 @@ Both tacit and overt models are found in CAS [Complex Adaptive Systems] of all k
 ::: {.notes}
 :::
 
-## Learning Objectives {.smaller}
+## Interaction
 
-Understand how to model and program competition among agents for a shared resource.
+[**Interaction**]{.brand-red} is the process by which agents communicate with or affect each other, such as by exchanging information, competing for resources, helping or fighting each other, or conducting business.
 
-Master how to program direct interactions, when one agent makes another agent execute some behavior.
+::: {style="font-size: 0.8em; padding-top: 10px;"}
+We also use “interaction” for how agents affect, and are affected by, their environment; environmental in­teractions such as consuming and producing resources are very important in many ABMs.
+:::
 
-Understand the difference between local and global interactions and how to model each.
-
-Learn how to program long­term interactions among turtles using two techniques: creat­ing a NetLogo link between interacting turtles, and giving turtles a variable that contains the other turtle(s) it interacts with.
-
-Understand how NetLogo’s lists can be used to model memory.
+::: footer
+[@railsback2019a]
+:::
 
 ::: {.notes}
 :::
@@ -329,7 +314,9 @@ Understand how NetLogo’s lists can be used to model memory.
 ::: {.notes}
 :::
 
-# Real-World Applications
+## Climate-Rice Response Model {.smaller}
+
+[![](images/logoclim-interaction.png){fig-align="center" style="width: 100%; padding-top: 0px;"}](https://github.com/sustentarea/logoclim/)
 
 ::: {.notes}
 :::
@@ -341,15 +328,15 @@ Understand how NetLogo’s lists can be used to model memory.
 
 ## Summary of Key Takeaways {.smaller}
 
-[**Complex systems**]{.brand-red} are systems with many interconnected parts that exhibit emergent behavior.
+[**Adaptive behaviors**]{.brand-green} are decisions that agents make, in response to the current state of themselves and their environment, to improve (either explicitly or implicitly) their state with respect to some [**objective**]{.brand-red}.
 
-[**Complexity science**]{.brand-red} seeks to explain emergent phenomena or mechanisms that “screen-off” their constituent parts and thereby allow new levels of description and understanding.
+[**Prediction**]{.brand-brown} is the process by which agents predict future conditions for adaptive behavior.
 
-[**Agent-based models**]{.brand-red} are bottom-up stochastic computational models with the purpose of simulating the behavior of agents and their interactions, allowing us to study emergent phenomena.
+[**Interaction**]{.brand-dark-red} is the process by which agents communicate with or affect each other, such as by exchanging information, competing for resources, helping or fighting each other, or conducting business.
 
-[**Prediction**]{.brand-red}
-
-[**Interaction**]{.brand-red}
+::: footer
+[@railsback2019a]
+:::
 
 ::: {.notes}
 :::
@@ -389,13 +376,6 @@ In accordance with the [American Psychological Association (APA) Style](https://
 ::: footer
 (Artwork by [Allison Horst](https://twitter.com/allison_horst))
 :::
-
-::: {.notes}
-:::
-
-# Appendices {visibility="uncounted"}
-
-## (AP) Placeholder {.smaller .nostretch visibility="uncounted"}
 
 ::: {.notes}
 :::

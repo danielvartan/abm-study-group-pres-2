@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<link href="./images/sustentarea-icon.svg" rel="icon" type="image/svg+xml">
+<link href="./images/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/tabby.min.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -185,7 +185,6 @@
 <li><span class="brand-brown"><strong>Introduction</strong></span></li>
 <li><span class="brand-brown"><strong>Prediction</strong></span></li>
 <li><span class="brand-brown"><strong>Interaction</strong></span></li>
-<li><span class="brand-brown"><strong>Real-World Applications</strong></span></li>
 <li><span class="brand-brown"><strong>Conclusion</strong></span></li>
 </ol>
 </div>
@@ -314,8 +313,8 @@
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside></section><section id="past-concepts" class="slide level2 smaller"><h2>Past Concepts</h2>
-<p><span class="brand-green"><strong>Adaptive behaviors</strong></span> are decisions that agents make, in response to the current state of themselves and their environment, to improve (either explicitly or implicitly) their state with respect to some <span class="brand-red"><strong>objective</strong></span>. <span class="citation" data-cites="railsback2019a">(<a href="#/references" role="doc-biblioref" onclick="">Railsback &amp; Grimm, 2019, p. 149</a>)</span></p>
+      }</style></aside></section><section id="previous-concepts" class="slide level2 smaller"><h2>Previous Concepts</h2>
+<p><span class="brand-green"><strong>Adaptive behaviors</strong></span> are decisions that agents make, in response to the current state of themselves and their environment, to improve (either explicitly or implicitly) their state with respect to some <span class="brand-red"><strong>objective</strong></span>.</p>
 <div style="padding-top: 15px;">
 <p><strong>Busi­nesses</strong> may make decisions to <strong>increase profit or market share</strong>, but doing so often increases the risk of losses.</p>
 <p><strong>Animals</strong> may seek <strong>higher food intake</strong> but must consider that eating more can also increase the risk of being eaten.</p>
@@ -345,11 +344,14 @@
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside></section><section id="chapter-objectives" class="slide level2 smaller"><h2>Chapter Objectives</h2>
-<p>Develop an understanding that modeling adaptive decisions typically requires model­ing some kind of prediction of the future consequences of choices, and of how different assumptions about prediction can affect model results.</p>
-<p>Learn the extremely important technique of programming and analyzing key submodels independently to thoroughly understand their behavior.</p>
-<p>Learn to draw contour plots of submodel results.</p>
-<p>Be exposed to one technique—Bayesian updating—for modeling how individuals update their predictions on the basis of what has happened so far.</p>
+      }</style></aside></section><section id="prediction-1" class="slide level2"><h2>Prediction</h2>
+<p><span class="brand-red"><strong>Prediction</strong></span> is the process by which agents predict future conditions for adaptive behavior.</p>
+<div style="font-size: 0.8em; padding-top: 10px;">
+<p>We include prediction in our design concepts because even the simplest decisions involve prediction, and assuming our agents make predictions allows us to design powerful decision ­making submodels.</p>
+</div>
+<div class="footer">
+<p><span class="citation" data-cites="railsback2019a">(<a href="#/references" role="doc-biblioref" onclick="">Railsback &amp; Grimm, 2019</a>)</span></p>
+</div>
 <aside class="notes"><style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -398,9 +400,7 @@
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside></section><section id="prediction-1" class="slide level2 smaller"><h2>Prediction</h2>
-<p>Modeling adaptive behavior often requires mod­eling prediction. <span class="citation" data-cites="railsback2019a">(<a href="#/references" role="doc-biblioref" onclick="">Railsback &amp; Grimm, 2019, p. 161</a>)</span></p>
-</section><section id="internal-models" class="slide level2 smaller nostretch"><h2>Internal Models</h2>
+      }</style></aside></section><section id="internal-models" class="slide level2 smaller nostretch"><h2>Internal Models</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure><p><img data-src="images/holland-1995-figure-1-13.png" class="quarto-figure quarto-figure-center" style="width: 52.5%; padding-top: 0px;"></p>
 </figure>
@@ -419,8 +419,8 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside></section><section id="internal-models-1" class="slide level2 smaller"><h2>Internal Models</h2>
-<p>A <strong>tacit</strong> internal model simply prescribes a current action, under an implicit prediction of some desired future state, as in the case of the bacterium.</p>
-<p>An <strong>overt</strong> internal model is used as a basis for explicit, but internal, explorations of alternatives, a process often called lookahead.</p>
+<p>A <span class="brand-red"><strong>tacit</strong></span> internal model simply prescribes a current action, under an implicit prediction of some desired future state, as in the case of the bacterium.</p>
+<p>An <span class="brand-red"><strong>overt</strong></span> internal model is used as a basis for explicit, but internal, explorations of alternatives, a process often called lookahead.</p>
 <div style="padding-top: 15px;">
 <p>Both tacit and overt models are found in CAS [Complex Adaptive Systems] of all kinds — the actions and identity supplied by an immune system fall at the tacit end of the scale, whereas the internal models of agents in an economy are both tacit and overt.</p>
 </div>
@@ -437,19 +437,10 @@
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside></section><section id="two-systems" class="slide level2 smaller"><h2>Two Systems</h2>
-<div class="columns">
-<div class="column" style="width: 60%; padding-top: 0px;">
-<p><strong>System 1</strong> operates automatically and quickly, with little or no effort and no sense of voluntary control.</p>
-<p><strong>System 2</strong> allocates attention to the effortful mental activities that demand it, including complex computations. The operations of System 2 are often associated with the subjective experience of agency, choice, and concentration.</p>
-</div><div class="column" style="width: 40%; padding-top: 0px;">
+      }</style></aside></section><section id="business-investor-model-11.5" class="slide level2 smaller"><h2>Business Investor Model (11.5)</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure><p><a href="https://www.google.com/books/edition/_/SHvzzuCnuv8C"><img data-src="images/kahneman-2013-cover.png" class="quarto-figure quarto-figure-center" style="width: 90%; padding-top: 0px;"></a></p>
+<figure><p><a href="https://github.com/danielvartan/business-investor-model"><img data-src="images/business-investor-model-11-5-interface.png" class="quarto-figure quarto-figure-center" style="width: 100%; padding-top: 30px;"></a></p>
 </figure>
-</div>
-</div></div>
-<div class="footer">
-<p><span class="citation" data-cites="kahneman2013">(<a href="#/references" role="doc-biblioref" onclick="">Kahneman, 2013</a>)</span></p>
 </div>
 <aside class="notes"><style type="text/css">
         span.MJX_Assistive_MathML {
@@ -472,12 +463,14 @@
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside></section><section id="learning-objectives" class="slide level2 smaller"><h2>Learning Objectives</h2>
-<p>Understand how to model and program competition among agents for a shared resource.</p>
-<p>Master how to program direct interactions, when one agent makes another agent execute some behavior.</p>
-<p>Understand the difference between local and global interactions and how to model each.</p>
-<p>Learn how to program long­term interactions among turtles using two techniques: creat­ing a NetLogo link between interacting turtles, and giving turtles a variable that contains the other turtle(s) it interacts with.</p>
-<p>Understand how NetLogo’s lists can be used to model memory.</p>
+      }</style></aside></section><section id="interaction-1" class="slide level2"><h2>Interaction</h2>
+<p><span class="brand-red"><strong>Interaction</strong></span> is the process by which agents communicate with or affect each other, such as by exchanging information, competing for resources, helping or fighting each other, or conducting business.</p>
+<div style="font-size: 0.8em; padding-top: 10px;">
+<p>We also use “interaction” for how agents affect, and are affected by, their environment; environmental in­teractions such as consuming and producing resources are very important in many ABMs.</p>
+</div>
+<div class="footer">
+<p><span class="citation" data-cites="railsback2019a">(<a href="#/references" role="doc-biblioref" onclick="">Railsback &amp; Grimm, 2019</a>)</span></p>
+</div>
 <aside class="notes"><style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -545,7 +538,11 @@
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside></section></section><section id="real-world-applications" class="title-slide slide level1 center"><h1>Real-World Applications</h1>
+      }</style></aside></section><section id="climate-rice-response-model" class="slide level2 smaller"><h2>Climate-Rice Response Model</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="https://github.com/sustentarea/logoclim/"><img data-src="images/logoclim-interaction.png" class="quarto-figure quarto-figure-center" style="width: 100%; padding-top: 0px;"></a></p>
+</figure>
+</div>
 <aside class="notes"><style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -556,7 +553,7 @@
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside></section><section><section id="conclusion" class="title-slide slide level1 smaller center"><h1>Conclusion</h1>
+      }</style></aside></section></section><section><section id="conclusion" class="title-slide slide level1 smaller center"><h1>Conclusion</h1>
 <aside class="notes"><style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -568,11 +565,12 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside></section><section id="summary-of-key-takeaways" class="slide level2 smaller"><h2>Summary of Key Takeaways</h2>
-<p><span class="brand-red"><strong>Complex systems</strong></span> are systems with many interconnected parts that exhibit emergent behavior.</p>
-<p><span class="brand-red"><strong>Complexity science</strong></span> seeks to explain emergent phenomena or mechanisms that “screen-off” their constituent parts and thereby allow new levels of description and understanding.</p>
-<p><span class="brand-red"><strong>Agent-based models</strong></span> are bottom-up stochastic computational models with the purpose of simulating the behavior of agents and their interactions, allowing us to study emergent phenomena.</p>
-<p><span class="brand-red"><strong>Prediction</strong></span></p>
-<p><span class="brand-red"><strong>Interaction</strong></span></p>
+<p><span class="brand-green"><strong>Adaptive behaviors</strong></span> are decisions that agents make, in response to the current state of themselves and their environment, to improve (either explicitly or implicitly) their state with respect to some <span class="brand-red"><strong>objective</strong></span>.</p>
+<p><span class="brand-brown"><strong>Prediction</strong></span> is the process by which agents predict future conditions for adaptive behavior.</p>
+<p><span class="brand-dark-red"><strong>Interaction</strong></span> is the process by which agents communicate with or affect each other, such as by exchanging information, competing for resources, helping or fighting each other, or conducting business.</p>
+<div class="footer">
+<p><span class="citation" data-cites="railsback2019a">(<a href="#/references" role="doc-biblioref" onclick="">Railsback &amp; Grimm, 2019</a>)</span></p>
+</div>
 <aside class="notes"><style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -617,9 +615,6 @@ Grimm, V., Railsback, S. F., Vincenot, C. E., Berger, U., Gallagher, C., DeAngel
 <div id="ref-holland1995" class="csl-entry" role="listitem">
 Holland, J. H. (1995). <em>Hidden order: How adaptation builds complexity</em>. Basic Books.
 </div>
-<div id="ref-kahneman2013" class="csl-entry" role="listitem">
-Kahneman, D. (2013). <em>Thinking, fast and slow</em>. <span>Farrar, Straus and Giroux</span>.
-</div>
 <div id="ref-muller2013" class="csl-entry" role="listitem">
 Müller, B., Bohn, F., Dreßler, G., Groeneveld, J., Klassert, C., Martin, R., Schlüter, M., Schulze, J., Weise, H., &amp; Schwarz, N. (2013). Describing human decisions in agent-based models – <span>ODD</span>&nbsp;+&nbsp;<span>D</span>, an extension of the <span>ODD</span> protocol. <em>Environmental Modelling &amp; Software</em>, <em>48</em>, 37–48. <a href="https://doi.org/10.1016/j.envsoft.2013.06.003">https://doi.org/10.1016/j.envsoft.2013.06.003</a>
 </div>
@@ -645,19 +640,6 @@ Railsback, S. F., &amp; Grimm, V. (2019). <em>Agent-based and individual-based m
 <div class="footer">
 <p>(Artwork by <a href="https://twitter.com/allison_horst">Allison Horst</a>)</p>
 </div>
-<aside class="notes"><style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside></section></section><section><section id="appendices" class="title-slide slide level1 center" data-visibility="uncounted"><h1>Appendices</h1>
-
-</section><section id="ap-placeholder" class="slide level2 smaller nostretch" data-visibility="uncounted"><h2>(AP) Placeholder</h2>
 <aside class="notes"><style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;

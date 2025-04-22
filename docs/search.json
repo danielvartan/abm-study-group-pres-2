@@ -4,7 +4,7 @@
     "href": "index.html#hi-there",
     "title": "Prediction and Interaction in ABMs",
     "section": "Hi there! 👋",
-    "text": "Hi there! 👋\n\n\nThis presentation will talk about Prediction and Interaction in the context of Agent-Based Modeling (ABM).\n\n\n\n\n\n\n\nHere are our main topics:\n\n\nIntroduction\nPrediction\nInteraction\nReal-World Applications\nConclusion\n\n\n\n\n(Artwork extracted from the NetLogo Web logo)"
+    "text": "Hi there! 👋\n\n\nThis presentation will talk about Prediction and Interaction in the context of Agent-Based Modeling (ABM).\n\n\n\n\n\n\n\nHere are our main topics:\n\n\nIntroduction\nPrediction\nInteraction\nConclusion\n\n\n\n\n(Artwork extracted from the NetLogo Web logo)"
   },
   {
     "objectID": "index.html#main-reference",
@@ -28,18 +28,18 @@
     "text": "Our Schedule\n\n\nFebruary 199 & 10 – Observation & Sensing\nMarch 12 11 – Adaptive Behavior and Objectives\nApril 1612 & 13 – Prediction & Interaction\nMay 2114 & 15 – Scheduling & Stochasticity\nJune 1816 – Collectives\n\n\n\nAugust 1318 – Patterns for Model Structure\nSeptember 1019 – Theory Development\nOctober 820 – Parameterization and Calibration\nNovember 1922 – Analyzing and Understanding ABMs\nDecember 1023 – Sensitivity, Uncertainty, and Robustness Analysis"
   },
   {
-    "objectID": "index.html#past-concepts",
-    "href": "index.html#past-concepts",
+    "objectID": "index.html#previous-concepts",
+    "href": "index.html#previous-concepts",
     "title": "Prediction and Interaction in ABMs",
-    "section": "Past Concepts",
-    "text": "Past Concepts\nAdaptive behaviors are decisions that agents make, in response to the current state of themselves and their environment, to improve (either explicitly or implicitly) their state with respect to some objective. (Railsback & Grimm, 2019, p. 149)\n\nBusi­nesses may make decisions to increase profit or market share, but doing so often increases the risk of losses.\nAnimals may seek higher food intake but must consider that eating more can also increase the risk of being eaten.\nPolitical parties may act to increase their popularity but at the cost of compromising their core values.\n\n\n(Railsback & Grimm, 2019, pp. 149–150)"
+    "section": "Previous Concepts",
+    "text": "Previous Concepts\nAdaptive behaviors are decisions that agents make, in response to the current state of themselves and their environment, to improve (either explicitly or implicitly) their state with respect to some objective.\n\nBusi­nesses may make decisions to increase profit or market share, but doing so often increases the risk of losses.\nAnimals may seek higher food intake but must consider that eating more can also increase the risk of being eaten.\nPolitical parties may act to increase their popularity but at the cost of compromising their core values.\n\n\n(Railsback & Grimm, 2019, pp. 149–150)"
   },
   {
-    "objectID": "index.html#chapter-objectives",
-    "href": "index.html#chapter-objectives",
+    "objectID": "index.html#prediction-1",
+    "href": "index.html#prediction-1",
     "title": "Prediction and Interaction in ABMs",
-    "section": "Chapter Objectives",
-    "text": "Chapter Objectives\nDevelop an understanding that modeling adaptive decisions typically requires model­ing some kind of prediction of the future consequences of choices, and of how different assumptions about prediction can affect model results.\nLearn the extremely important technique of programming and analyzing key submodels independently to thoroughly understand their behavior.\nLearn to draw contour plots of submodel results.\nBe exposed to one technique—Bayesian updating—for modeling how individuals update their predictions on the basis of what has happened so far."
+    "section": "Prediction",
+    "text": "Prediction\nPrediction is the process by which agents predict future conditions for adaptive behavior.\n\nWe include prediction in our design concepts because even the simplest decisions involve prediction, and assuming our agents make predictions allows us to design powerful decision ­making submodels.\n\n\n(Railsback & Grimm, 2019)"
   },
   {
     "objectID": "index.html#odd-questions",
@@ -56,13 +56,6 @@
     "text": "ODD Questions\n\n\nIf appropriate, what internal models are agents assumed to use to estimate future conditions or consequences of their decisions? What tacit or hidden predictions are implied in these internal model assumptions?(Grimm et al., 2010)\n\n\n\nWhich data do the agents use to predict future conditions?(Müller et al., 2013)"
   },
   {
-    "objectID": "index.html#prediction-1",
-    "href": "index.html#prediction-1",
-    "title": "Prediction and Interaction in ABMs",
-    "section": "Prediction",
-    "text": "Prediction\nModeling adaptive behavior often requires mod­eling prediction. (Railsback & Grimm, 2019, p. 161)"
-  },
-  {
     "objectID": "index.html#internal-models",
     "href": "index.html#internal-models",
     "title": "Prediction and Interaction in ABMs",
@@ -77,18 +70,18 @@
     "text": "Internal Models\nA tacit internal model simply prescribes a current action, under an implicit prediction of some desired future state, as in the case of the bacterium.\nAn overt internal model is used as a basis for explicit, but internal, explorations of alternatives, a process often called lookahead.\n\nBoth tacit and overt models are found in CAS [Complex Adaptive Systems] of all kinds — the actions and identity supplied by an immune system fall at the tacit end of the scale, whereas the internal models of agents in an economy are both tacit and overt.\n\n\n(Holland, 1995, p. 33)"
   },
   {
-    "objectID": "index.html#two-systems",
-    "href": "index.html#two-systems",
+    "objectID": "index.html#business-investor-model-11.5",
+    "href": "index.html#business-investor-model-11.5",
     "title": "Prediction and Interaction in ABMs",
-    "section": "Two Systems",
-    "text": "Two Systems\n\n\nSystem 1 operates automatically and quickly, with little or no effort and no sense of voluntary control.\nSystem 2 allocates attention to the effortful mental activities that demand it, including complex computations. The operations of System 2 are often associated with the subjective experience of agency, choice, and concentration.\n\n\n\n\n\n\n\n(Kahneman, 2013)"
+    "section": "Business Investor Model (11.5)",
+    "text": "Business Investor Model (11.5)"
   },
   {
-    "objectID": "index.html#learning-objectives",
-    "href": "index.html#learning-objectives",
+    "objectID": "index.html#interaction-1",
+    "href": "index.html#interaction-1",
     "title": "Prediction and Interaction in ABMs",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\nUnderstand how to model and program competition among agents for a shared resource.\nMaster how to program direct interactions, when one agent makes another agent execute some behavior.\nUnderstand the difference between local and global interactions and how to model each.\nLearn how to program long­term interactions among turtles using two techniques: creat­ing a NetLogo link between interacting turtles, and giving turtles a variable that contains the other turtle(s) it interacts with.\nUnderstand how NetLogo’s lists can be used to model memory."
+    "section": "Interaction",
+    "text": "Interaction\nInteraction is the process by which agents communicate with or affect each other, such as by exchanging information, competing for resources, helping or fighting each other, or conducting business.\n\nWe also use “interaction” for how agents affect, and are affected by, their environment; environmental in­teractions such as consuming and producing resources are very important in many ABMs.\n\n\n(Railsback & Grimm, 2019)"
   },
   {
     "objectID": "index.html#odd-questions-2",
@@ -112,11 +105,18 @@
     "text": "ODD Questions\n\n\nOn what do the interactions depend?(Müller et al., 2013)\n\n\n\nIf a coordination network exists, how does it affect the agent behavior? Is the structure of the network imposed or emergent?(Müller et al., 2013)"
   },
   {
+    "objectID": "index.html#climate-rice-response-model",
+    "href": "index.html#climate-rice-response-model",
+    "title": "Prediction and Interaction in ABMs",
+    "section": "Climate-Rice Response Model",
+    "text": "Climate-Rice Response Model"
+  },
+  {
     "objectID": "index.html#summary-of-key-takeaways",
     "href": "index.html#summary-of-key-takeaways",
     "title": "Prediction and Interaction in ABMs",
     "section": "Summary of Key Takeaways",
-    "text": "Summary of Key Takeaways\nComplex systems are systems with many interconnected parts that exhibit emergent behavior.\nComplexity science seeks to explain emergent phenomena or mechanisms that “screen-off” their constituent parts and thereby allow new levels of description and understanding.\nAgent-based models are bottom-up stochastic computational models with the purpose of simulating the behavior of agents and their interactions, allowing us to study emergent phenomena.\nPrediction\nInteraction"
+    "text": "Summary of Key Takeaways\nAdaptive behaviors are decisions that agents make, in response to the current state of themselves and their environment, to improve (either explicitly or implicitly) their state with respect to some objective.\nPrediction is the process by which agents predict future conditions for adaptive behavior.\nInteraction is the process by which agents communicate with or affect each other, such as by exchanging information, competing for resources, helping or fighting each other, or conducting business.\n\n(Railsback & Grimm, 2019)"
   },
   {
     "objectID": "index.html#closing-remarks",
@@ -130,7 +130,7 @@
     "href": "index.html#references",
     "title": "Prediction and Interaction in ABMs",
     "section": "References",
-    "text": "References\n\nIn accordance with the American Psychological Association (APA) Style, 7th edition.\n\n\n\nGrimm, V., Berger, U., DeAngelis, D. L., Polhill, J. G., Giske, J., & Railsback, S. F. (2010). The ODD protocol: A review and first update. Ecological Modelling, 221(23), 2760–2768. https://doi.org/10.1016/j.ecolmodel.2010.08.019\n\n\nGrimm, V., Railsback, S. F., Vincenot, C. E., Berger, U., Gallagher, C., DeAngelis, D. L., Edmonds, B., Ge, J., Giske, J., Groeneveld, J., Johnston, A. S. A., Milles, A., Nabe-Nielsen, J., Polhill, J. G., Radchuk, V., Rohwäder, M.-S., Stillman, R. A., Thiele, J. C., & Ayllón, D. (2020). The ODD protocol for describing agent-based and other simulation models: A second update to improve clarity, replication, and structural realism. Journal of Artificial Societies and Social Simulation, 23(2), 7. https://doi.org/10.18564/jasss.4259\n\n\nHolland, J. H. (1995). Hidden order: How adaptation builds complexity. Basic Books.\n\n\nKahneman, D. (2013). Thinking, fast and slow. Farrar, Straus and Giroux.\n\n\nMüller, B., Bohn, F., Dreßler, G., Groeneveld, J., Klassert, C., Martin, R., Schlüter, M., Schulze, J., Weise, H., & Schwarz, N. (2013). Describing human decisions in agent-based models – ODD + D, an extension of the ODD protocol. Environmental Modelling & Software, 48, 37–48. https://doi.org/10.1016/j.envsoft.2013.06.003\n\n\nRailsback, S. F., & Grimm, V. (2019). Agent-based and individual-based modeling: A practical introduction (2nd ed.). Princeton University Press."
+    "text": "References\n\nIn accordance with the American Psychological Association (APA) Style, 7th edition.\n\n\n\nGrimm, V., Berger, U., DeAngelis, D. L., Polhill, J. G., Giske, J., & Railsback, S. F. (2010). The ODD protocol: A review and first update. Ecological Modelling, 221(23), 2760–2768. https://doi.org/10.1016/j.ecolmodel.2010.08.019\n\n\nGrimm, V., Railsback, S. F., Vincenot, C. E., Berger, U., Gallagher, C., DeAngelis, D. L., Edmonds, B., Ge, J., Giske, J., Groeneveld, J., Johnston, A. S. A., Milles, A., Nabe-Nielsen, J., Polhill, J. G., Radchuk, V., Rohwäder, M.-S., Stillman, R. A., Thiele, J. C., & Ayllón, D. (2020). The ODD protocol for describing agent-based and other simulation models: A second update to improve clarity, replication, and structural realism. Journal of Artificial Societies and Social Simulation, 23(2), 7. https://doi.org/10.18564/jasss.4259\n\n\nHolland, J. H. (1995). Hidden order: How adaptation builds complexity. Basic Books.\n\n\nMüller, B., Bohn, F., Dreßler, G., Groeneveld, J., Klassert, C., Martin, R., Schlüter, M., Schulze, J., Weise, H., & Schwarz, N. (2013). Describing human decisions in agent-based models – ODD + D, an extension of the ODD protocol. Environmental Modelling & Software, 48, 37–48. https://doi.org/10.1016/j.envsoft.2013.06.003\n\n\nRailsback, S. F., & Grimm, V. (2019). Agent-based and individual-based modeling: A practical introduction (2nd ed.). Princeton University Press."
   },
   {
     "objectID": "index.html#thank-you",
@@ -138,12 +138,5 @@
     "title": "Prediction and Interaction in ABMs",
     "section": "Thank You!",
     "text": "Thank You!\n\n\n\n\n\n(Artwork by Allison Horst)"
-  },
-  {
-    "objectID": "index.html#ap-placeholder",
-    "href": "index.html#ap-placeholder",
-    "title": "Prediction and Interaction in ABMs",
-    "section": "(AP) Placeholder",
-    "text": "(AP) Placeholder"
   }
 ]
